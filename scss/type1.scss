@@ -1,0 +1,33 @@
+a{color: #000; text-decoration: none;}
+#hd{
+    .gnb{
+        .d1{            
+            .gnb_d1_a{
+                font-size: 1.2em;
+            }
+            ul{
+                //소메뉴
+                min-width: 80px;
+                white-space: nowrap;
+                display: none;
+                li{
+                    a{
+                        font-size: 0.9rem;                       
+                        color: #fff;
+                    }
+                }
+                
+            }
+            &.d1-left{
+                ul{
+                left: -2rem;
+                }
+            }
+            &:hover{
+                ul{
+                   display: block;                  
+                }                
+            }
+        }
+    }
+}
