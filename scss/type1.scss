@@ -11,11 +11,17 @@ a{color: #000; text-decoration: none;}
                 //소메뉴
                 min-width: 80px;
                 white-space: nowrap;
-                height: 0;
-                transition: height 0.5s;
+                max-height: 0;
+                transition: max-height 0.5s;
                 overflow: hidden;
                 padding: 0 1rem !important;
                 border: 0 !important;
+                &::before,
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 1.5rem;
+                }
                 li{
                     a{
                         font-size: 0.9rem;                       
@@ -32,8 +38,8 @@ a{color: #000; text-decoration: none;}
             }
             &:hover{
                 //대메뉴의 소메뉴 노출
-                ul{
-                    height: 180px;               
+                ul{                    
+                    max-height: 180px;               
                 }                
             }
         }

@@ -9,11 +9,16 @@ a {
 #hd .gnb .d1 ul {
   min-width: 80px;
   white-space: nowrap;
-  height: 0;
-  transition: height 0.5s;
+  max-height: 0;
+  transition: max-height 0.5s;
   overflow: hidden;
   padding: 0 1rem !important;
   border: 0 !important;
+}
+#hd .gnb .d1 ul::before, #hd .gnb .d1 ul::after {
+  content: "";
+  display: block;
+  height: 1.5rem;
 }
 #hd .gnb .d1 ul li a {
   font-size: 0.9rem;
@@ -23,5 +28,5 @@ a {
   left: -2rem;
 }
 #hd .gnb .d1:hover ul {
-  height: 180px;
+  max-height: 180px;
 }
