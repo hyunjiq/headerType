@@ -11,7 +11,11 @@ a{color: #000; text-decoration: none;}
                 //소메뉴
                 min-width: 80px;
                 white-space: nowrap;
-                display: none;
+                height: 0;
+                transition: height 0.5s;
+                overflow: hidden;
+                padding: 0 1rem !important;
+                border: 0 !important;
                 li{
                     a{
                         font-size: 0.9rem;                       
@@ -21,13 +25,15 @@ a{color: #000; text-decoration: none;}
                 
             }
             &.d1-left{
+                //세번째 소메뉴 왼쪽
                 ul{
                 left: -2rem;
                 }
             }
             &:hover{
+                //대메뉴의 소메뉴 노출
                 ul{
-                   display: block;                  
+                    height: 180px;               
                 }                
             }
         }
