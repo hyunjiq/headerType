@@ -1,0 +1,19 @@
+a{color:#333; text-decoration: none;}
+.gnb{
+    a:hover{
+        color: #f00;
+    }
+    &:hover{
+        ul{
+            height: 180px;
+        }
+    }
+    ul{
+        top:100%;
+        //부모태그밑까지 내려감
+        min-width: 120px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s;
+    }
+}

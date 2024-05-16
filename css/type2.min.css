@@ -1,0 +1,1 @@
+a{color:#333;text-decoration:none}.gnb a:hover{color:red}.gnb:hover ul{height:180px}.gnb ul{top:100%;min-width:120px;height:0;overflow:hidden;transition:height .3s}.rightMenu input{box-sizing:border-box}
