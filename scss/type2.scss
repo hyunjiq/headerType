@@ -1,11 +1,16 @@
 a{color:#333; text-decoration: none;}
 .gnb{
     a:hover{
-        color: #f00;
+        color: #f00 !important;        
+    }
+    li:hover{
+        >a{
+            color: #f00 !important; 
+        }
     }
     &:hover{
         ul{
-            height: 180px;
+            height: 180px;            
         }
     }
     ul{
