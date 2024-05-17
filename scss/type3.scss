@@ -10,59 +10,37 @@ a{text-decoration: none; color: #000;}
         }
     }
     .gnb{
-        .gnb_li{
-            &:hover{
-                .gnb_a{
-                    color:red;//활성화
-                }
+        &:hover{
+            .gnb_li{
+                &:hover{
+                    .gnb_a{
+                        color:red;//활성화
+                    }
+                }                
                 .gnb_ul{  
                     //각각의 소메뉴 사이즈가 다르므로 height로 하면 안됨                    
-                    max-height: 180px;
-                    border-radius: 0 0 20px 20px; 
-                    border-bottom: 1px solid #ccc;
-                    &:after{                    
-                        // border-radius: 0 0 20px 20px;                                    
-                    }    
-                    
-                } 
-                
-            }
+                    height: 180px;                    
+                }   
+            }                          
+        }
+        .gnb_li{            
+            padding:0 35px !important;            
             .gnb_a{
                 font-size: 1.5rem;
             }
             .gnb_ul{
                 min-width: 10rem;
-                // padding: 0 1.5rem;
-                padding-left: 0;
-                background: #fff;
-                margin-top: -1px;
-                border:1px solid #ccc;
-                border-top:0;
-                border-bottom: 1px solid transparent;
+                height: 0;
                 overflow: hidden;
-                //모든 소메뉴가 대메뉴를 기준으로 정 가운데로
-                transform: translateX(-50%);
-                left: 50%;
-                //드롭다운 애니메이션
-                max-height: 0;
-                overflow: hidden;
-                // transition: 1s;
-                transition: max-height 1s ease, border-radius 3s ease, border-bottom 1s ease; 
-                transition-delay: 0s, 1s, 0s;
-
+                transition: 0.5s;  
+                left: -35px;     
                 &:after,
                 &:before{
                     content: "";
                     display: block;
                     height: 1rem;
                 }
-                &:after{
-                    // border-bottom: 1px solid #ccc;
-                    // transition: border-radius 3s ease; 
-                    // transition-delay: 1s;
-                }
-                .gnb_li_li{         
-                    padding: 0 1.5rem;           
+                .gnb_li_li{                  
                     white-space: nowrap;
                     text-align: center;
                 }
